@@ -39,3 +39,4 @@ Route::put('/article/update/{article}',[ArticleController::class, 'update'])->na
 Route::delete('/article/destroy/{article}',[ArticleController::class, 'destroy'])->name('article.destroy');
 Route::get('/article/auth/{auth}',[ArticleController::class , 'auth'])->name('article.auth');
 Route::post('/article/colors/{article}',[ArticleController::class,  'colors'])->name('article.colors');
+Route::post('/article/elements/{article}',[ArticleController::class,  'elements'])->name('article.elements');

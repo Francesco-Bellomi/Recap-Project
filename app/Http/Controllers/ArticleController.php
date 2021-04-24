@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Color;
 use App\Models\Article;
+use App\Models\Element;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -103,9 +104,11 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
 
+        $elements = Element::all();
+
         $colors = Color::all();
 
-        return view('article.show', compact('article' , 'colors'));
+        return view('article.show', compact('article' , 'colors', 'elements'));
     }
 
     /**
@@ -202,6 +205,22 @@ class ArticleController extends Controller
             }
         
         $article->colors()->attach($request->color);
+        }
+
+        return redirect()->back();
+
+    }
+
+    public function elements(Request $request , Article $article){
+    
+
+        if ($article->elements) {
+            
+            if (count($article->elements) > 0) {
+                $article->elements()->detach();     
+            }
+        
+        $article->elements()->attach($request->element);
         }
 
         return redirect()->back();
