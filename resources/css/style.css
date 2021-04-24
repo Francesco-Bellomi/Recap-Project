@@ -1,0 +1,235 @@
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+a {
+    color: white !important;
+}
+
+.nav-item a {
+    font-size: 20px;
+}
+
+.nav-link {
+    border-bottom: 2px solid transparent;
+    padding: 0%;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid crimson;
+    padding: 0%;
+}
+
+.dropdown-item:hover {
+    font-size: 20px;
+    background-color: crimson;
+}
+
+.border-bottom-red {
+    border-bottom: 2px solid crimson;
+}
+
+.border-top-red {
+    border-top: 2px solid crimson;
+}
+
+.b-red {
+    border-bottom: 2px solid crimson;
+    border-top: 2px solid crimson;
+}
+
+.title {
+    text-shadow: 3px 3px 1px crimson;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Fredoka One', cursive;
+}
+
+p,
+i {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.title-font {
+    font-family: 'Fredoka One', cursive;
+}
+
+.p-font {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.btn:hover {
+    background-color: rgba(220, 20, 60, 0.74) !important;
+}
+
+.carbon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('/img/carbon.jpg');
+}
+
+.bg-red {
+    background-color: crimson;
+    transition: all 0.3s;
+}
+
+.border-img {
+    border: 6px solid crimson;
+}
+
+.card {
+    color: black !important;
+}
+
+.tc-red {
+    color: crimson;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.tc-white {
+    color: white !important;
+}
+
+.btn {
+    color: #fff;
+    background-color: #8c020e;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 15px 5px;
+    margin: 8px;
+    border-radius: 0;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:focus {
+    color: #fff;
+}
+
+.btn:hover {
+    color: #fff;
+    padding-left: 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:before {
+    content: '';
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 120%;
+    transform-origin: right center;
+    transform: translateX(-50%) rotate(0);
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:after {
+    content: "\f105";
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Font Awesome 5 Free";
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    padding: 0 0 0 3px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover:before {
+    top: -90%;
+    transform: translateX(-50%) rotate(-10deg);
+}
+
+.btn:hover:after {
+    left: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+    .btn {
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 !important;
+    border-radius: 0.25rem;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.55);
+    border-color: transparent;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
